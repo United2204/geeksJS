@@ -1,31 +1,22 @@
 /* eslint-disable */
 
-const excusas = [
-  "El perro se comió mi tarea",
-  "El gato se metió en la impresora",
-  "Mi hermano pequeño borró todo por accidente",
-  "Tuve una emergencia familiar",
-  "Me quedé sin batería en el auto",
-  "El tráfico estuvo terrible",
-  "No me di cuenta de la hora",
-  "Olvidé por completo",
-  "Me confundí con la fecha",
-  "La computadora se me congeló",
-  "Internet no funcionaba",
-  "Tuve un problema con el software",
-  "Me sentí mal",
-  "Tuve un dolor de cabeza terrible",
-  "No me pude concentrar"
+let who = ["The dog ", "My grandma ", "The mailman ", "My bird "];
+let action = ["ate ", "peed ", "crushed ", "broke "];
+let what = ["my homework ", "my phone ", "the car "];
+let when = [
+  "before the class",
+  "when I was sleeping",
+  "while I was exercising",
+  "during my lunch",
+  "while I was praying"
 ];
 
-function generarExcusa() {
-  const index = Math.floor(Math.random() * excusas.length);
-  return excusas[index];
-}
-
-// Mostrar la excusa inicial al cargar la página
-document.getElementById("excusa").textContent = generarExcusa();
-
-/*window.addEventListener("beforeunload", function() {
-  document.getElementById("excusa").textContent = generarExcusa();
-});*/
+window.addEventListener("load", function() {
+  let excusa = "";
+  excusa += who[Math.floor(Math.random() * who.length)];
+  excusa += action[Math.floor(Math.random() * action.length)];
+  excusa += what[Math.floor(Math.random() * what.length)];
+  excusa += when[Math.floor(Math.random() * when.length)];
+  const excuseElement = document.getElementById("excuse");
+  excuseElement.innerHTML = excusa;
+});
