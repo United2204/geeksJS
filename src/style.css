@@ -1,3 +1,13 @@
 body{
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.omg {
+  flex-grow: 1; /* Permite que "omg" se expanda */
+}
+
+.excusa {
+  flex-shrink: 1; /* Permite que "excusa" se contraiga */
 }
